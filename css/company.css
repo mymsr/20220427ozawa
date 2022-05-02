@@ -1,0 +1,16 @@
+.companyContent {
+  padding: 100px;
+}
+table {
+  width: 100%;
+}
+.companyContent tr {
+  width: auto;
+  border-bottom: 1px solid #000;
+}
+.companyContent th{
+  padding: 30px ;
+}
+.companyContent td {
+  padding: 30px 30px;
+}

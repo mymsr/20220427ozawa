@@ -1,0 +1,278 @@
+/*ヘッダー*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header a{
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+.inner {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.logo img {
+  width: 40%;
+  height: auto;
+  
+}
+.logo img:hover,
+button:hover,
+header a:hover,
+.outline:hover,
+.recruit:hover,
+.blogCard img:hover,
+footer ul li a:hover { /*透明*/
+  opacity: 0.7;
+}
+nav ul{
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  padding-left: 30px;
+}
+
+/*トップぺージ*/
+.topPage {
+  width: 100%;
+  position: relative;
+  
+}
+.topPage img {
+  width: 100%;
+  height: 80vh;
+  vertical-align:top;
+  
+}
+.topPage p {
+  width:  100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+.topPage p span {
+  font-size: 20px;
+}
+#topPage__img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+#topPage__text {
+  font-size: 30px;
+}
+
+/*トップページコメント*/
+.comentPage {
+  background-color: #232b2b;
+  padding: 80px 100px;
+}
+.comentPage__title {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.comentPage__text {
+  color: #fff;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+/*サービスページ*/
+.service {
+  background-color: #fff;
+  padding: 100px;
+}
+.serviceTitle,
+.blogTitle,
+.inquiryTitle { /*サービス・ブログ・問い合わせ*/
+  text-align: center;
+}
+.serviceTitle p,
+.blogTitle p,
+.inquiryTitle p { /*サービス・ブログ・問い合わせ*/
+  font-size: 30px;
+  font-weight: bold;
+}
+. {
+  opacity: 0.8;
+}
+.serviceContents {
+  column-count: 2;
+  margin-top: 30px; 
+}
+.serviceCard {
+  break-inside: avoid;
+}
+.serviceCard img{
+  width: 100%;
+}
+.serviceCard h1,
+.serviceCard p{
+  font-size: 20px;
+  margin: 10px;
+}
+.button {
+  text-align: center;
+  margin-top: 50px; 
+}
+.button__item{   /*ボタン*/
+  background-color: #aa0114;
+  color: #fff;
+  width: 300px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+/*ニュース*/
+.news {
+  padding: 100px;
+  background-color: #232b2b;
+}
+.newsTitle {
+  display: flex;
+  justify-content: space-between;
+}
+.newsTitle p{
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.button__news {
+  text-align: center; 
+}
+.button__news-item {
+  background-color: #aa0114;
+  color: #fff;
+  width: 150px;
+  height: 35px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+.news ul li {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 20px;
+  list-style: none;
+}
+.news ul li:hover{
+  background-color: aliceblue;
+}
+.news ul li a{
+  
+  text-decoration: none;
+  color: #000;
+  line-height: 80px;
+  display: block; 
+  font-size: 20px;
+}
+.news ul li span {
+  padding-left: 10px;
+  
+}
+
+/*ブログ*/
+.blog {
+  margin: 100px;
+}
+.blogContents {
+  margin-top: 30px;
+  column-count: 3;
+}
+.blogCard {
+  break-inside: avoid;
+  width: 100%;
+}
+.blogCard img {
+  width: 100%;
+}
+.blogCard h3,
+.blogCard p {
+  margin: 10px 10px 10px 0;
+}
+.blogCard p {
+  font-size: 20px;
+}
+
+/*会社概要・採用情報*/
+.company {
+  width: 100%;
+  margin: 0 0 100px 0;
+  display: flex;
+}
+.outline,
+.recruit {
+  width: 50%;
+  height: 300px;
+  text-align: center;
+}
+.outline a,
+.recruit a{
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  line-height: 300px;
+}
+.outline {
+  background-color: #aa0114; 
+}
+.recruit {
+  background-color: #232b2b;
+}
+
+/*お問い合わせ*/
+.inquiry {
+  padding: 100px;
+  background-color: aliceblue;
+}
+.inquiryTitle span {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+/*フッター*/
+footer {
+  padding: 0 100px;
+  background-color: #232b2b;
+}
+small {
+  color: #fff;
+  font-size: 20px;
+}
+footer ul li {
+  padding-left: 10px;
+  border-right: 1px solid #fff;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  
+  padding-right: 10px;
+  font-size: 10px;
+  display: block;
+  
+}

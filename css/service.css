@@ -1,0 +1,29 @@
+.contents__product {/*全体*/
+  padding: 100px;
+}
+.productCard {/*カード全体*/
+  display: flex;
+  border-bottom: 1px solid #000;
+  padding: 20px 0;
+}
+.productCard__top { /*上ボーダー*/
+  border-top: 1px solid #000;
+}
+.productCard__img { /*写真のdiv*/
+  width: 20%;
+}
+.productCard__img img {
+  width: 100%;
+}
+
+
+
+.productComents { /*コメントのdiv*/
+  padding: 0 30px;
+}
+.productComents h1 { /*コメントタイトル*/
+  font-size: 25px;
+}
+.productComents p { /*コメントテキスト*/
+  padding-top: 20px;
+}
