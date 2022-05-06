@@ -2,6 +2,11 @@ form {
   padding: 100px 200px;
   position: relative;
 }
+@media screen and (max-width:768px) {
+  form {
+    padding: 100px 50px; 
+  }
+}
 form span {
   color: red;
 }
@@ -25,9 +30,9 @@ form span {
   background-color: #232b2b;
   color: #fff;;
   width: 300px;
-  height: 30px;
+  height: 50px;
   border: none;
-  font-size: 10px;
+  font-size: 20px;
   cursor: pointer;
   
 }

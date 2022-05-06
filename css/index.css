@@ -1,28 +1,26 @@
 /*ヘッダー*/
 body {
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 .header {
+  padding: 20px;
   background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
 }
-header a{
+.header__nav a{
   text-decoration: none;
   color: #000;
   font-size: 15px;
 }
-.inner {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-}
+
 .logo img {
   width: 40%;
   height: auto;
-  
 }
 .logo img:hover,
 button:hover,
@@ -33,13 +31,100 @@ header a:hover,
 footer ul li a:hover { /*透明*/
   opacity: 0.7;
 }
-nav ul{
+.header nav ul{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 nav ul li {
   padding-left: 30px;
 }
+/*レスポンシブ*/
+@media screen and (min-width:769px) {
+  #header {
+    display: none !important;
+  }
+}
+@media screen and (max-width:768px) {
+  .header {
+    display: none !important;
+  }
+
+  #header {
+    padding: 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .responsiveNav ul li a {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  .responsiveNav {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    background: #fff;
+    transition: .7s;
+    text-align: center;
+  }
+  
+  .responsiveNav ul {
+    padding-top: 80px;
+  }
+  
+  .responsiveNav ul li {
+    list-style-type: none;
+    margin-top: 50px;
+  }
+  
+  /*ドロワーメニュー*/
+  .responsiveMenu {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+  }
+  .menu__line--top,
+  .menu__line--middle,
+  .menu__line--bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    transform: 0.5s;
+  }
+  .menu__line--top {
+    top: 0;
+  }
+  .menu__line--middle {
+    top: 14px;
+  }
+  .menu__line--bottom {
+    bottom: 0;
+  }
+  .responsiveMenu.open span:nth-of-type(1) {
+    top: 14px;
+    transform: rotate(45deg);
+  }
+  .responsiveMenu.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .responsiveMenu.open span:nth-of-type(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+  .in {
+    transform: translateX(100%);
+  }
+  }
 
 /*トップぺージ*/
 .topPage {
@@ -73,7 +158,11 @@ nav ul li {
   object-fit: cover;
   vertical-align: top;
 }
-
+@media screen and (max-width:768px) {
+  #topPage__img {
+    height: 300px;
+  }
+}
 #topPage__text {
   font-size: 30px;
 }
@@ -110,12 +199,14 @@ nav ul li {
   font-size: 30px;
   font-weight: bold;
 }
-. {
-  opacity: 0.8;
-}
 .serviceContents {
   column-count: 2;
   margin-top: 30px; 
+}
+@media screen and (max-width:769px) {
+  .serviceContents {
+    column-count: 1;
+  }
 }
 .serviceCard {
   break-inside: avoid;
@@ -143,16 +234,19 @@ nav ul li {
   
 }
 
+
+
 /*ニュース*/
 .news {
   padding: 100px;
   background-color: #232b2b;
 }
 .newsTitle {
+  background-color: #232b2b;
   display: flex;
   justify-content: space-between;
 }
-.newsTitle p{
+.newsTitle p {
   color: #fff;
   font-size: 30px;
   margin-bottom: 30px;
@@ -170,8 +264,6 @@ nav ul li {
   cursor: pointer;
 }
 .news ul li {
-  width: 100%;
-  height: 80px;
   background-color: #fff;
   margin-bottom: 20px;
   text-align: left;
@@ -202,6 +294,11 @@ nav ul li {
   margin-top: 30px;
   column-count: 3;
 }
+@media screen and (max-width:768px){
+  .blogContents {
+    column-count: 1;
+  }
+}
 .blogCard {
   break-inside: avoid;
   width: 100%;
@@ -211,7 +308,7 @@ nav ul li {
 }
 .blogCard h3,
 .blogCard p {
-  margin: 10px 10px 10px 0;
+  padding: 10px 10px 10px 0;
 }
 .blogCard p {
   font-size: 20px;
@@ -255,24 +352,49 @@ nav ul li {
 }
 
 /*フッター*/
-footer {
-  padding: 0 100px;
+.footer {
+  padding: 25px 100px;
+  height: auto;
   background-color: #232b2b;
+  line-height: 30px;
+}
+.inner {
+  display: flex;
+  justify-content: space-between;
+  
 }
 small {
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
+}
+.inner ul {
+  display: flex;
+  justify-content: space-between;
 }
 footer ul li {
-  padding-left: 10px;
-  border-right: 1px solid #fff;
+  padding-left: 20px;
+  border-right: 0.5px solid #fff;
+  
 }
 footer ul li a {
   text-decoration: none;
   color: #fff;
-  
   padding-right: 10px;
-  font-size: 10px;
-  display: block;
-  
+  font-size: 10px; 
 }
+@media screen and (max-width:768px){
+  .footer {
+    padding: 25px 150px;
+  }
+  .inner ul {
+    flex-direction: column;
+  }
+  .inner {
+    align-items: center;
+  }
+  .footer ul li {
+    border: none;
+    margin: 0 auto;
+  }
+}
+

@@ -1,29 +1,36 @@
-.contents__product {/*全体*/
+.contents__product {
   padding: 100px;
 }
-.productCard {/*カード全体*/
+.productCard {
   display: flex;
   border-bottom: 1px solid #000;
   padding: 20px 0;
 }
-.productCard__top { /*上ボーダー*/
+@media screen and (max-width:768px) {
+  .productCard {
+    display: block;
+  }
+}
+.productCard__top { 
   border-top: 1px solid #000;
 }
-.productCard__img { /*写真のdiv*/
+.productCard__img { 
   width: 20%;
+}
+@media screen and (max-width:768px){
+  .productCard__img {
+    width: 100%;
+  }
 }
 .productCard__img img {
   width: 100%;
 }
-
-
-
-.productComents { /*コメントのdiv*/
+.productComents { 
   padding: 0 30px;
 }
-.productComents h1 { /*コメントタイトル*/
+.productComents h1 { 
   font-size: 25px;
 }
-.productComents p { /*コメントテキスト*/
+.productComents p {
   padding-top: 20px;
 }

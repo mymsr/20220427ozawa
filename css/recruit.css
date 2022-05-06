@@ -1,8 +1,10 @@
 .recruitContent {
-  padding: 100px 200px;
+  padding: 100px 200px 0 200px;
 }
-.recruitTitle {
-  
+@media screen and (max-width:768px){
+  .recruitContent {
+    padding: 100px 50px 0 50px;
+  }
 }
 .recruitTitle h3 {
   border-bottom: 1px solid #000;
@@ -18,7 +20,7 @@
   width: 100%;
   border-collapse: collapse;
 }
-.recruitTable table:first-child {
+.recruitTable table {
   margin-bottom: 100px;
 }
 .recruitTable th {
